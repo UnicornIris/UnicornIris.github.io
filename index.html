@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leyan Lyu | Resume Portfolio</title>
+    <meta
+      name="description"
+      content="Simple bilingual resume website for Leyan Lyu, focused on software engineering, machine learning, and AI product roles."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site">
+      <header class="topbar">
+        <a class="brand" href="#top">LEYAN LYU</a>
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="zh" type="button">中文</button>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="intro" id="top">
+          <div class="intro-photo">
+            <img src="assets/profile.jpg" alt="Portrait of Leyan Lyu" />
+          </div>
+          <div class="intro-copy">
+            <p class="eyebrow" data-i18n="eyebrow">SDE · MLE · AI Product</p>
+            <h1 data-i18n="name">Leyan (Iris) Lyu</h1>
+            <p class="tagline" data-i18n="tagline">
+              Computer Science student building useful products with machine learning, software engineering,
+              and research experience.
+            </p>
+
+            <div class="summary-grid">
+              <div>
+                <span class="label" data-i18n="summaryEducationLabel">Education</span>
+                <p data-i18n="summaryEducation">
+                  University of Maryland, B.S. in Computer Science
+                  <br />
+                  The Hong Kong University of Science and Technology Exchange
+                </p>
+              </div>
+              <div>
+                <span class="label" data-i18n="summaryFocusLabel">Focus</span>
+                <p data-i18n="summaryFocus">
+                  Applied ML, full-stack systems, AI-enabled product thinking
+                </p>
+              </div>
+              <div>
+                <span class="label" data-i18n="summaryContactLabel">Contact</span>
+                <p>leyanlyu@gmail.com</p>
+              </div>
+              <div>
+                <span class="label" data-i18n="summaryLinksLabel">Links</span>
+                <p>
+                  <a href="https://www.linkedin.com/in/le-yan-lyu" target="_blank" rel="noreferrer">LinkedIn</a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="resume-layout">
+          <aside class="sidebar">
+            <div class="sidebar-block">
+              <h2 data-i18n="skillsTitle">Skills</h2>
+              <p data-i18n="skillsBody">
+                Python, SQL, Java, PyTorch, TensorFlow, Scikit-learn, MLflow, React, PostgreSQL, AWS, Docker, Linux, Git
+              </p>
+            </div>
+
+            <div class="sidebar-block">
+              <h2 data-i18n="educationTitle">Education</h2>
+              <p data-i18n="educationBody">
+                University of Maryland, College Park
+                <br />
+                B.S. in Computer Science
+                <br />
+                The Hong Kong University of Science and Technology
+                <br />
+                Exchange
+                <br />
+                Aug 2023 - May 2027
+              </p>
+            </div>
+
+            <div class="sidebar-block">
+              <h2 data-i18n="projectTitle">Projects</h2>
+              <ul class="simple-list">
+                <li><a href="#ai-pet-project" data-i18n="projectTwo">AI Pet Companion Prototype</a></li>
+                <li><a href="#spotify-project" data-i18n="projectOne">Spotify 音乐趋势分析</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="content-column">
+            <section class="experience">
+              <div class="section-head">
+                <h2 data-i18n="experienceTitle">Experience</h2>
+                <p data-i18n="experienceHint">Click an experience to expand the details.</p>
+              </div>
+
+              <div class="experience-shell">
+                <div class="experience-list" role="tablist" aria-label="Experience list">
+                  <button class="experience-item active" type="button" data-target="research-student">
+                    <span class="item-date">2025.09 - Present</span>
+                    <span class="item-title" data-i18n="expOneTitle">Machine Learning Research Student</span>
+                    <span class="item-org" data-i18n="expOneOrg">Research Lab, University of Maryland (IBM Qiskit & QLab)</span>
+                  </button>
+
+                  <button class="experience-item" type="button" data-target="research-intern">
+                    <span class="item-date">2025.06 - 2025.07</span>
+                    <span class="item-title" data-i18n="expTwoTitle">Machine Learning Research Intern</span>
+                    <span class="item-org" data-i18n="expTwoOrg">Research Lab, University of Maryland (IBM Qiskit & QLab)</span>
+                  </button>
+
+                  <button class="experience-item" type="button" data-target="it-support">
+                    <span class="item-date">2025.07 - Present</span>
+                    <span class="item-title" data-i18n="expThreeTitle">IT Systems Support Worker</span>
+                    <span class="item-org" data-i18n="expThreeOrg">University of Maryland</span>
+                  </button>
+
+                  <button class="experience-item" type="button" data-target="foundation">
+                    <span class="item-date">2024.06 - 2024.08</span>
+                    <span class="item-title" data-i18n="expFourTitle">Social Media Technology and Data Science Intern</span>
+                    <span class="item-org" data-i18n="expFourOrg">Hupanmodou Foundation</span>
+                  </button>
+                </div>
+
+                <div class="experience-detail">
+                  <article class="detail-panel active" id="research-student">
+                    <div class="detail-copy">
+                      <h3 data-i18n="detailOneTitle">Machine Learning Research Student</h3>
+                      <p class="detail-meta" data-i18n="detailOneMeta">Research Lab, University of Maryland (IBM Qiskit & QLab) · Bayesian neural networks, uncertainty analysis, quantum ML benchmarking</p>
+                      <ul class="detail-list">
+                        <li data-i18n="detailOneBulletOne">Designed Bayesian neural network models for scientific prediction tasks, using uncertainty analysis to improve interpretability and confidence calibration.</li>
+                        <li data-i18n="detailOneBulletTwo">Benchmarked classical and quantum neural networks across multiple evaluation settings to compare performance, robustness, and practical tradeoffs.</li>
+                        <li data-i18n="detailOneBulletThree">Built MLflow-based experiment pipelines to strengthen reproducibility, tracking, and team collaboration inside the lab workflow.</li>
+                      </ul>
+                    </div>
+                    <div class="detail-image">
+                      <button class="image-trigger" type="button" data-lightbox-src="assets/research-student.png" data-lightbox-alt="Research student poster">
+                        <img src="assets/research-student.png" alt="Research student poster" />
+                      </button>
+                    </div>
+                  </article>
+
+                  <article class="detail-panel" id="research-intern">
+                    <div class="detail-copy">
+                      <h3 data-i18n="detailTwoTitle">Machine Learning Research Intern</h3>
+                      <p class="detail-meta" data-i18n="detailTwoMeta">Research Lab, University of Maryland (IBM Qiskit & QLab) · Low-fidelity transfer learning for molecular property prediction</p>
+                      <ul class="detail-list">
+                        <li data-i18n="detailTwoBulletOne">Processed and analyzed 665K+ molecular samples to support large-scale low-fidelity transfer learning experiments.</li>
+                        <li data-i18n="detailTwoBulletTwo">Implemented distributed training pipelines with PyTorch Lightning to improve training efficiency and experimental throughput.</li>
+                        <li data-i18n="detailTwoBulletThree">Generated benchmarking results and quantitative reports that helped guide model comparison, optimization, and next-step research decisions.</li>
+                      </ul>
+                    </div>
+                    <div class="detail-image">
+                      <button class="image-trigger" type="button" data-lightbox-src="assets/research-intern.png" data-lightbox-alt="Research intern poster">
+                        <img src="assets/research-intern.png" alt="Research intern poster" />
+                      </button>
+                    </div>
+                  </article>
+
+                  <article class="detail-panel text-only" id="it-support">
+                    <div class="detail-copy">
+                      <h3 data-i18n="detailThreeTitle">IT Systems Support Worker</h3>
+                      <p class="detail-meta" data-i18n="detailThreeMeta">Linux operations, incident diagnosis, system documentation</p>
+                      <ul class="detail-list">
+                        <li data-i18n="detailThreeBulletOne">Diagnosed 100+ Linux and network incidents using logs and operational metrics.</li>
+                        <li data-i18n="detailThreeBulletTwo">Performed root-cause analysis and improved recurring issue documentation.</li>
+                        <li data-i18n="detailThreeBulletThree">Built stronger instincts for reliability, debugging, and operational systems thinking.</li>
+                      </ul>
+                    </div>
+                  </article>
+
+                  <article class="detail-panel text-only" id="foundation">
+                    <div class="detail-copy">
+                      <h3 data-i18n="detailFourTitle">Social Media Technology and Data Science Intern</h3>
+                      <p class="detail-meta" data-i18n="detailFourMeta">Website operations, data analysis, digital content strategy</p>
+                      <ul class="detail-list">
+                        <li data-i18n="detailFourBulletOne">Analyzed engagement data to evaluate campaign effectiveness and user response.</li>
+                        <li data-i18n="detailFourBulletTwo">Supported website operations, content updates, and technical maintenance.</li>
+                        <li data-i18n="detailFourBulletThree">Turned audience insights into clearer communication and product-facing decisions.</li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="project-showcase">
+              <div class="section-head">
+                <h2 data-i18n="projectShowcaseTitle">Selected Projects</h2>
+                <p data-i18n="projectShowcaseHint">Two projects with visuals and polished project descriptions.</p>
+              </div>
+
+              <div class="project-grid">
+                <article class="project-card" id="ai-pet-project">
+                  <button class="project-media project-media-preview image-trigger" type="button" data-lightbox-src="assets/ai-pet-preview.png" data-lightbox-alt="AI pet prototype interface preview">
+                    <span class="project-badge" data-i18n="aiPetBadge">Prototype Preview</span>
+                    <img src="assets/ai-pet-preview.png" alt="AI pet prototype interface preview" />
+                  </button>
+                  <div class="project-copy">
+                    <p class="project-kicker" data-i18n="aiPetKicker">AI Product · Conversational Interface</p>
+                    <h3 data-i18n="aiPetTitle">AI Pet Companion</h3>
+                    <p class="project-meta" data-i18n="aiPetMeta">Mobile-first interaction design, character-driven UX, planned public launch within 6 months</p>
+                    <p class="project-description" data-i18n="aiPetDescription">
+                      Designed and prototyped a mobile-first AI pet companion product focused on emotional interaction, character identity, and conversational user experience.
+                    </p>
+                    <ul class="detail-list">
+                      <li data-i18n="aiPetBulletOne">Built the visual prototype and interaction flow to define how users chat, bond, and engage with the companion.</li>
+                      <li data-i18n="aiPetBulletTwo">Developed the product direction around mobile-first design, expressive UI, and a planned public launch within 6 months.</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="project-card" id="spotify-project">
+                  <div class="project-media">
+                    <img src="assets/Spotify.png" alt="Spotify music trend analysis project preview" />
+                  </div>
+                  <div class="project-copy">
+                    <p class="project-kicker" data-i18n="spotifyKicker">Data Science · Predictive Modeling</p>
+                    <h3 data-i18n="spotifyTitle">Spotify 音乐趋势分析</h3>
+                    <p class="project-meta" data-i18n="spotifyMeta">Regression, decision trees, exploratory analysis, presentation-ready reporting</p>
+                    <p class="project-description" data-i18n="spotifyDescription">
+                      Built a Spotify popularity prediction project using regression models, decision trees, and exploratory analysis to study which track features most strongly influence popularity.
+                    </p>
+                    <ul class="detail-list">
+                      <li data-i18n="spotifyBulletOne">Designed the full workflow for data cleaning, feature analysis, model comparison, and insight synthesis.</li>
+                      <li data-i18n="spotifyBulletTwo">Summarized findings into a concise visual report for portfolio presentation and recruiter review.</li>
+                    </ul>
+                    <div class="project-actions">
+                      <a class="button primary" href="https://github.com/UnicornIris/spotify-popularity-predictor" target="_blank" rel="noreferrer" data-i18n="spotifyRepoButton">
+                        View GitHub
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" type="button" aria-label="Close preview">&times;</button>
+      <img class="lightbox-image" src="" alt="" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
