@@ -229,6 +229,10 @@ p {
   box-shadow: var(--shadow);
 }
 
+.project-card.no-media {
+  grid-template-columns: 1fr;
+}
+
 .project-media {
   position: relative;
   display: flex;
@@ -327,6 +331,7 @@ p {
 .experience-list {
   display: grid;
   gap: 10px;
+  align-content: start;
 }
 
 .experience-item {

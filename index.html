@@ -74,7 +74,9 @@
             <div class="sidebar-block">
               <h2 data-i18n="skillsTitle">Skills</h2>
               <p data-i18n="skillsBody">
-                Python, SQL, Java, PyTorch, TensorFlow, Scikit-learn, MLflow, React, PostgreSQL, AWS, Docker, Linux, Git
+                Python, SQL, Java, PyTorch, TensorFlow, Scikit-learn, MLflow, React, PostgreSQL, AWS, Docker, Linux, Git,
+                TypeScript/JavaScript, C, PowerShell, pandas, NumPy, PennyLane, Mastra, OpenAI API, pgvector, MySQL,
+                ClickHouse, TDengine, Coolify, Microsoft Graph API, GitHub Copilot, Claude Code, Cursor
               </p>
             </div>
 
@@ -83,19 +85,24 @@
               <p data-i18n="educationBody">
                 University of Maryland, College Park
                 <br />
-                B.S. in Computer Science
+                B.S. in Computer Science, Minor in General Business
+                <br />
+                Aug 2023 - May 2027 (Expected)
+                <br />
+                Applying to M.S. programs for Fall 2027 entry
                 <br />
                 The Hong Kong University of Science and Technology
                 <br />
-                Exchange
+                Exchange Program, Computer Science
                 <br />
-                Aug 2023 - May 2027
+                Sep 2026 - Dec 2026
               </p>
             </div>
 
             <div class="sidebar-block">
               <h2 data-i18n="projectTitle">Projects</h2>
               <ul class="simple-list">
+                <li><a href="#pinn-project" data-i18n="projectThree">Quantum-Classical PINN</a></li>
                 <li><a href="#ai-pet-project" data-i18n="projectTwo">AI Pet Companion Prototype</a></li>
                 <li><a href="#spotify-project" data-i18n="projectOne">Spotify 音乐趋势分析</a></li>
               </ul>
@@ -111,7 +118,13 @@
 
               <div class="experience-shell">
                 <div class="experience-list" role="tablist" aria-label="Experience list">
-                  <button class="experience-item active" type="button" data-target="research-student">
+                  <button class="experience-item active" type="button" data-target="akila">
+                    <span class="item-date">2026.06 - 2026.10 (Expected)</span>
+                    <span class="item-title" data-i18n="expAkilaTitle">AI-Native Forward Deployed Engineer Intern</span>
+                    <span class="item-org" data-i18n="expAkilaOrg">Akila, Aden Group</span>
+                  </button>
+
+                  <button class="experience-item" type="button" data-target="research-student">
                     <span class="item-date">2025.09 - Present</span>
                     <span class="item-title" data-i18n="expOneTitle">Machine Learning Research Student</span>
                     <span class="item-org" data-i18n="expOneOrg">Research Lab, University of Maryland (IBM Qiskit & QLab)</span>
@@ -124,7 +137,7 @@
                   </button>
 
                   <button class="experience-item" type="button" data-target="it-support">
-                    <span class="item-date">2025.07 - Present</span>
+                    <span class="item-date">2025.07 - 2026.04</span>
                     <span class="item-title" data-i18n="expThreeTitle">IT Systems Support Worker</span>
                     <span class="item-org" data-i18n="expThreeOrg">University of Maryland</span>
                   </button>
@@ -137,14 +150,32 @@
                 </div>
 
                 <div class="experience-detail">
-                  <article class="detail-panel active" id="research-student">
+                  <article class="detail-panel text-only active" id="akila">
+                    <div class="detail-copy">
+                      <h3 data-i18n="detailAkilaTitle">AI-Native Forward Deployed Engineer Intern</h3>
+                      <p class="detail-meta" data-i18n="detailAkilaMeta">Akila, Aden Group · Hybrid, remote from Sep 2026 · LLM pipelines, data infrastructure, enterprise knowledge base</p>
+                      <ul class="detail-list">
+                        <li data-i18n="detailAkilaBulletOne">Built an LLM extraction pipeline over ~20,000 work orders and 250,000+ inspection records across 3 facility sites, structuring ~5,800 free-text maintenance narratives into typed fields; validated outputs with a human-in-the-loop accuracy/calibration harness and an independent embeddings + KMeans cross-check.</li>
+                        <li data-i18n="detailAkilaBulletTwo">Consolidated MySQL, TDengine and ClickHouse sources into one cleaned, PII-stripped MySQL instance on Coolify; scored data quality on a 24-table CMMS schema across 5 sites (equipment linkage 0.6%–79%) to scope per-site analysis.</li>
+                        <li data-i18n="detailAkilaBulletThree">Designed a 4-agent architecture (ingestion/chunking, Q&A, anomaly detection, alert email) on Mastra + pgvector, with the chunking agent as the shared data layer.</li>
+                        <li data-i18n="detailAkilaBulletFour">Led the source-data assessment for Aden Brain, the group's enterprise knowledge base: inventoried 20,000+ SharePoint files via Microsoft Graph PowerShell, flagged 5 governance risks, and costed 4 build routes.</li>
+                        <li data-i18n="detailAkilaBulletFive">Prototyped permission-aware retrieval on the Microsoft Graph Search API; tested it on real SOP queries and showed keyword search fails on paraphrased Chinese questions, motivating a semantic retrieval layer.</li>
+                        <li data-i18n="detailAkilaBulletSix">Delivered client-facing equipment risk reports from raw CMMS data, surfacing a fire-safety defect open for 13 months and 56 of 58 cancelled PM orders on one critical asset; approved for presentation to the end client.</li>
+                        <li data-i18n="detailAkilaBulletSeven">Built a React/TypeScript analytics dashboard (in beta for multi-tenant integration) and a PBI-to-CRM reconciliation on Dataverse that found 345 client companies missing from site-level reporting.</li>
+                      </ul>
+                    </div>
+                  </article>
+
+                  <article class="detail-panel" id="research-student">
                     <div class="detail-copy">
                       <h3 data-i18n="detailOneTitle">Machine Learning Research Student</h3>
                       <p class="detail-meta" data-i18n="detailOneMeta">Research Lab, University of Maryland (IBM Qiskit & QLab) · Bayesian neural networks, uncertainty analysis, quantum ML benchmarking</p>
                       <ul class="detail-list">
                         <li data-i18n="detailOneBulletOne">Designed Bayesian neural network models for scientific prediction tasks, using uncertainty analysis to improve interpretability and confidence calibration.</li>
                         <li data-i18n="detailOneBulletTwo">Benchmarked classical and quantum neural networks across multiple evaluation settings to compare performance, robustness, and practical tradeoffs.</li>
-                        <li data-i18n="detailOneBulletThree">Built MLflow-based experiment pipelines to strengthen reproducibility, tracking, and team collaboration inside the lab workflow.</li>
+                        <li data-i18n="detailOneBulletThree">Built MLflow-based experiment pipelines to strengthen reproducibility, tracking, and team collaboration inside the lab workflow, improving cross-run comparison efficiency by ~30%.</li>
+                        <li data-i18n="detailOneBulletFour">Built and trained graph neural networks for molecular property prediction, applying transfer learning to fine-tune models pretrained on 665k low-fidelity molecules toward high-fidelity experimental targets.</li>
+                        <li data-i18n="detailOneBulletFive">Engineered data-cleaning, preprocessing, and evaluation routines to support comparison across model architectures.</li>
                       </ul>
                     </div>
                     <div class="detail-image">
@@ -179,6 +210,7 @@
                         <li data-i18n="detailThreeBulletOne">Diagnosed 100+ Linux and network incidents using logs and operational metrics.</li>
                         <li data-i18n="detailThreeBulletTwo">Performed root-cause analysis and improved recurring issue documentation.</li>
                         <li data-i18n="detailThreeBulletThree">Built stronger instincts for reliability, debugging, and operational systems thinking.</li>
+                        <li data-i18n="detailThreeBulletFour">Built an issue-tracking and knowledge-base system from log/usage analysis; managed Jira/Confluence workflows.</li>
                       </ul>
                     </div>
                   </article>
@@ -205,6 +237,19 @@
               </div>
 
               <div class="project-grid">
+                <article class="project-card no-media" id="pinn-project">
+                  <div class="project-copy">
+                    <p class="project-kicker" data-i18n="pinnKicker">Scientific ML · Independent Research</p>
+                    <h3 data-i18n="pinnTitle">Quantum-Classical PINN for Seawater Temperature Diffusion</h3>
+                    <p class="project-meta" data-i18n="pinnMeta">Jun 2026 - Present · PyTorch, PennyLane, physics-informed neural networks</p>
+                    <ul class="detail-list">
+                      <li data-i18n="pinnBulletOne">Independently designed and implemented a physics-informed neural network (PyTorch) reproducing a published seawater-temperature diffusion PDE benchmark across 6 forward/inverse scenarios, matching the paper's reported L2 relative errors via Adam + L-BFGS optimization.</li>
+                      <li data-i18n="pinnBulletTwo">Extended it into a hybrid quantum-classical PINN (PennyLane variational quantum circuit between classical layers); its lightweight quantum branch cuts total parameters by ~40% (2,421–2,717 vs. 4,353 classical).</li>
+                      <li data-i18n="pinnBulletThree">Timed forward passes and first-/second-order gradients: hybrid runtime is far higher than classical and grows with qubit count, circuit depth and batch size, so parameter count alone overstates efficiency; about to publish this winter.</li>
+                    </ul>
+                  </div>
+                </article>
+
                 <article class="project-card" id="ai-pet-project">
                   <button class="project-media project-media-preview image-trigger" type="button" data-lightbox-src="assets/ai-pet-preview.png" data-lightbox-alt="AI pet prototype interface preview">
                     <span class="project-badge" data-i18n="aiPetBadge">Prototype Preview</span>
@@ -220,6 +265,8 @@
                     <ul class="detail-list">
                       <li data-i18n="aiPetBulletOne">Built the visual prototype and interaction flow to define how users chat, bond, and engage with the companion.</li>
                       <li data-i18n="aiPetBulletTwo">Developed the product direction around mobile-first design, expressive UI, and a planned public launch within 6 months.</li>
+                      <li data-i18n="aiPetBulletThree">Built an LLM-based conversational system with multi-turn dialogue/memory management using an agent-style workflow.</li>
+                      <li data-i18n="aiPetBulletFour">Logged retention and interaction frequency to iterate on conversation quality; authored the PRD.</li>
                     </ul>
                   </div>
                 </article>
@@ -238,12 +285,8 @@
                     <ul class="detail-list">
                       <li data-i18n="spotifyBulletOne">Designed the full workflow for data cleaning, feature analysis, model comparison, and insight synthesis.</li>
                       <li data-i18n="spotifyBulletTwo">Summarized findings into a concise visual report for portfolio presentation and recruiter review.</li>
+                      <li data-i18n="spotifyBulletThree">Modeled popularity drivers across 110k+ songs (Python, regression, decision trees) with an interactive dashboard.</li>
                     </ul>
-                    <div class="project-actions">
-                      <a class="button primary" href="https://github.com/UnicornIris/spotify-popularity-predictor" target="_blank" rel="noreferrer" data-i18n="spotifyRepoButton">
-                        View GitHub
-                      </a>
-                    </div>
                   </div>
                 </article>
               </div>
