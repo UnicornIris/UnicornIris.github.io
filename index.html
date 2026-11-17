@@ -3,297 +3,338 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leyan Lyu | Resume Portfolio</title>
+    <title>Leyan (Iris) Lyu</title>
     <meta
       name="description"
-      content="Simple bilingual resume website for Leyan Lyu, focused on software engineering, machine learning, and AI product roles."
+      content="Leyan (Iris) Lyu, a Computer Science student building useful products with machine learning, software engineering, and research."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23fbfbfa'/%3E%3Ccircle cx='22' cy='40' r='5' fill='%231b2130'/%3E%3Ccircle cx='42' cy='22' r='4' fill='%231b2130'/%3E%3Cpath d='M22 40 L42 22' stroke='%231b2130' stroke-width='2.5'/%3E%3Ccircle cx='46' cy='44' r='6' fill='%2333478c'/%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("portfolio-theme");
+          if (saved) document.documentElement.dataset.theme = saved;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
-    <div class="site">
-      <header class="topbar">
-        <a class="brand" href="#top">LEYAN LYU</a>
-        <div class="lang-switch" aria-label="Language switcher">
-          <button class="lang-btn active" data-lang="en" type="button">EN</button>
-          <button class="lang-btn" data-lang="zh" type="button">中文</button>
-        </div>
-      </header>
 
-      <main class="main">
-        <section class="intro" id="top">
-          <div class="intro-photo">
-            <img src="assets/profile.jpg" alt="Portrait of Leyan Lyu" />
-          </div>
-          <div class="intro-copy">
-            <p class="eyebrow" data-i18n="eyebrow">SDE · MLE · AI Product</p>
-            <h1 data-i18n="name">Leyan (Iris) Lyu</h1>
-            <p class="tagline" data-i18n="tagline">
-              Computer Science student building useful products with machine learning, software engineering,
-              and research experience.
-            </p>
-
-            <div class="summary-grid">
-              <div>
-                <span class="label" data-i18n="summaryEducationLabel">Education</span>
-                <p data-i18n="summaryEducation">
-                  University of Maryland, B.S. in Computer Science
-                  <br />
-                  The Hong Kong University of Science and Technology Exchange
-                </p>
-              </div>
-              <div>
-                <span class="label" data-i18n="summaryFocusLabel">Focus</span>
-                <p data-i18n="summaryFocus">
-                  Applied ML, full-stack systems, AI-enabled product thinking
-                </p>
-              </div>
-              <div>
-                <span class="label" data-i18n="summaryContactLabel">Contact</span>
-                <p>leyanlyu@gmail.com</p>
-              </div>
-              <div>
-                <span class="label" data-i18n="summaryLinksLabel">Links</span>
-                <p>
-                  <a href="https://www.linkedin.com/in/le-yan-lyu" target="_blank" rel="noreferrer">LinkedIn</a>
-                </p>
-              </div>
+    <div class="column">
+        <header class="topbar">
+          <a class="wordmark" href="#top">Leyan Lyu</a>
+          <nav class="nav" aria-label="Sections">
+            <a href="#about" data-i18n="navAbout">Skills</a>
+            <a href="#projects" data-i18n="navProjects">Projects</a>
+            <a href="#experience" data-i18n="navExperience">Experience</a>
+          </nav>
+          <div class="controls">
+            <button class="theme-btn" type="button" aria-label="Toggle light and dark">
+              <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="4.5" />
+                <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" />
+              </svg>
+              <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" />
+              </svg>
+            </button>
+            <div class="lang-switch" aria-label="Language">
+              <button class="lang-btn active" data-lang="en" type="button">EN</button>
+              <button class="lang-btn" data-lang="zh" type="button">ZH</button>
             </div>
-
           </div>
-        </section>
+        </header>
 
-        <section class="resume-layout">
-          <aside class="sidebar">
-            <div class="sidebar-block">
+        <main>
+          <section class="intro" id="top">
+            <div class="intro-text">
+              <img class="avatar" src="assets/profile.jpg" alt="Portrait of Leyan Lyu" width="96" height="96" />
+              <p class="zh-name" data-lang-only="zh">吕乐衍</p>
+              <h1 data-i18n="name">Leyan (Iris) Lyu</h1>
+              <p class="lede" data-i18n="tagline">
+                Computer Science student building useful products with machine learning, software engineering, and research experience.
+              </p>
+            </div>
+            <figure class="sky">
+              <svg class="chart" viewBox="0 0 470 700" role="img" aria-labelledby="sky-caption">
+                <g class="grid">
+                  <line x1="107" y1="0" x2="107" y2="672" /><line x1="291" y1="0" x2="291" y2="672" />
+                  <line x1="40" y1="46" x2="470" y2="46" /><line x1="40" y1="306" x2="470" y2="306" /><line x1="40" y1="566" x2="470" y2="566" />
+                </g>
+                <g class="grid-label">
+                  <text x="113" y="696">9h</text><text x="297" y="696">8h30m</text>
+                  <text x="0" y="40">+30°</text><text x="0" y="300">+20°</text><text x="0" y="560">+10°</text>
+                </g>
+                <circle class="cluster" cx="229.3" cy="306.5" r="17" />
+                <path class="link" pathLength="1" d="M373 587 L200.6 354 L209.2 267.8 L188.3 78.2 M200.6 354 L116 517.7" />
+                <g class="stars">
+                  <circle cx="373" cy="587" r="20.7" /><circle cx="200.6" cy="354" r="17.3" /><circle cx="188.3" cy="78.2" r="16.6" />
+                  <circle cx="116" cy="517.7" r="14.7" /><circle cx="209.2" cy="267.8" r="11.3" />
+                </g>
+                <g class="star-names">
+                  <text x="396" y="622">β</text><text x="160" y="384">δ</text><text x="228" y="262">γ</text>
+                  <text x="210" y="70">ι</text><text x="76" y="516">α</text>
+                </g>
+                <text class="cluster-label" x="256" y="316">M44</text>
+              </svg>
+              <figcaption id="sky-caption" data-i18n="skyCaption">Cancer, with the Beehive Cluster (M44) at its heart. Star positions J2000.</figcaption>
+            </figure>
+            <dl class="facts">
+              <dt data-i18n="prevLabel">Previously</dt>
+              <dd data-i18n="prevValue">AI-Native Forward Deployed Engineer intern at Akila, Aden Group</dd>
+              <dt data-i18n="studyLabel">Studying</dt>
+              <dd data-i18n="studyValue">B.S. Computer Science, minor in General Business, University of Maryland, 2027</dd>
+              <dt data-i18n="writeLabel">Write</dt>
+              <dd>
+                <a href="mailto:leyanlyu@gmail.com">leyanlyu@gmail.com</a><span data-i18n="listSep">, </span>
+                <a href="https://www.linkedin.com/in/le-yan-lyu" target="_blank" rel="noreferrer">LinkedIn</a><span data-i18n="listSep">, </span>
+                <a href="https://github.com/UnicornIris" target="_blank" rel="noreferrer">GitHub</a>
+              </dd>
+            </dl>
+          </section>
+
+          <section class="block about" id="about">
+            <div>
               <h2 data-i18n="skillsTitle">Skills</h2>
-              <p data-i18n="skillsBody">
-                Python, SQL, Java, PyTorch, TensorFlow, Scikit-learn, MLflow, React, PostgreSQL, AWS, Docker, Linux, Git,
-                TypeScript/JavaScript, C, PowerShell, pandas, NumPy, PennyLane, Mastra, OpenAI API, pgvector, MySQL,
-                ClickHouse, TDengine, Coolify, Microsoft Graph API, GitHub Copilot, Claude Code, Cursor
-              </p>
+              <dl class="skills">
+              <dt data-i18n="skillsML">ML and research</dt>
+              <dd>Python, PyTorch, TensorFlow, Scikit-learn, MLflow, PennyLane, pandas, NumPy</dd>
+              <dt data-i18n="skillsEng">Engineering</dt>
+              <dd>TypeScript/JavaScript, React, Java, C, SQL, Docker, AWS, Linux, Git, PowerShell, Coolify</dd>
+              <dt data-i18n="skillsData">Data</dt>
+              <dd>PostgreSQL, pgvector, MySQL, ClickHouse, TDengine, Microsoft Graph API</dd>
+              <dt data-i18n="skillsAI">AI tooling</dt>
+              <dd>OpenAI API, Mastra, Claude Code, GitHub Copilot, Cursor</dd>
+            </dl>
             </div>
-
-            <div class="sidebar-block">
+            <div>
               <h2 data-i18n="educationTitle">Education</h2>
-              <p data-i18n="educationBody">
-                University of Maryland, College Park
-                <br />
-                B.S. in Computer Science, Minor in General Business
-                <br />
-                Aug 2023 - May 2027 (Expected)
-                <br />
-                Applying to M.S. programs for Fall 2027 entry
-                <br />
-                The Hong Kong University of Science and Technology
-                <br />
-                Exchange Program, Computer Science
-                <br />
-                Sep 2026 - Dec 2026
-              </p>
+              <dl class="skills">
+              <dt>2023 – 2027</dt>
+              <dd data-i18n="eduUmd">University of Maryland, College Park. B.S. in Computer Science, minor in General Business.</dd>
+            </dl>
             </div>
+          </section>
 
-            <div class="sidebar-block">
-              <h2 data-i18n="projectTitle">Projects</h2>
-              <ul class="simple-list">
-                <li><a href="#pinn-project" data-i18n="projectThree">Quantum-Classical PINN</a></li>
-                <li><a href="#ai-pet-project" data-i18n="projectTwo">AI Pet Companion Prototype</a></li>
-                <li><a href="#spotify-project" data-i18n="projectOne">Spotify 音乐趋势分析</a></li>
+          <section class="block" id="projects">
+            <h2 data-i18n="projectShowcaseTitle">Selected Projects</h2>
+            <p class="hint" data-i18n="projectShowcaseHint">From physics-informed ML research to product prototypes. Open one to read more.</p>
+            <div class="projects">
+            <details class="project" id="pinn-project">
+              <summary>
+                <span class="project-kicker" data-i18n="pinnKicker">Scientific ML, independent research</span>
+                <span class="project-title" data-i18n="pinnTitle">Fewer Parameters, Longer Runtimes: The Wall-Clock Cost of Hybrid Quantum PINNs</span>
+                <span class="project-meta" data-i18n="pinnMeta">Jun 2026 to present. Manuscript in preparation. PyTorch, PennyLane, physics-informed neural networks.</span>
+              </summary>
+              <div class="project-body">
+                <ul>
+                <li data-i18n="pinnBulletOne">Reproduced a published seawater-temperature diffusion PINN benchmark in PyTorch across 6 forward/inverse scenarios, then built hybrid quantum-classical PINNs (PennyLane variational circuits between classical layers) in four configurations that vary qubit count and circuit depth.</li>
+                <li data-i18n="pinnBulletTwo">Timed the four cumulative stages a PINN needs (forward pass, first- and second-order input gradients, PDE-loss parameter gradient) with circuits simulated on CPU: the hybrids were 14–56× slower than a classical PINN on the forward pass, 10–97× slower on the PDE-loss gradient, and 9–85× slower than size-matched classical controls.</li>
+                <li data-i18n="pinnBulletThree">Over the tested ranges, runtime grew roughly exponentially with qubit count, roughly linearly with circuit depth, and sub-linearly with batch size; a second simulator backend was 10–165× slower for the circuit-only forward pass.</li>
+                <li data-i18n="pinnBulletFour">Showed that parameter count misleads: the hybrids use 37.6–44.4% fewer parameters, yet the circuit holds at most 2.46% of them, and smaller classical controls still run slower than the baseline. The paper argues efficiency reports should pair parameter counts with stage-wise wall-clock time.</li>
               </ul>
+              </div>
+            </details>
+            <details class="project" id="ai-pet-project">
+              <summary>
+                <span class="project-kicker" data-i18n="aiPetKicker">AI product, conversational interface</span>
+                <span class="project-title" data-i18n="aiPetTitle">AI Pet Companion</span>
+                <span class="project-meta" data-i18n="aiPetMeta">Mobile-first interaction design, character-driven UX, planned public launch within 6 months.</span>
+              </summary>
+              <div class="project-body with-image">
+                <button class="image-trigger" type="button" data-lightbox-src="assets/ai-pet-preview.png" data-lightbox-alt="AI pet prototype interface preview">
+                <img src="assets/ai-pet-preview.png" alt="AI pet prototype interface preview" />
+              </button>
+              <div>
+                <p data-i18n="aiPetDescription">Designed and prototyped a mobile-first AI pet companion product focused on emotional interaction, character identity, and conversational user experience.</p>
+                <ul>
+                  <li data-i18n="aiPetBulletOne">Built the visual prototype and interaction flow to define how users chat, bond, and engage with the companion.</li>
+                  <li data-i18n="aiPetBulletTwo">Developed the product direction around mobile-first design, expressive UI, and a planned public launch within 6 months.</li>
+                  <li data-i18n="aiPetBulletThree">Built an LLM-based conversational system with multi-turn dialogue/memory management using an agent-style workflow.</li>
+                  <li data-i18n="aiPetBulletFour">Logged retention and interaction frequency to iterate on conversation quality; authored the PRD.</li>
+                </ul>
+              </div>
+              </div>
+            </details>
+            <details class="project" id="spotify-project">
+              <summary>
+                <span class="project-kicker" data-i18n="spotifyKicker">Data science, predictive modeling</span>
+                <span class="project-title" data-i18n="spotifyTitle">Spotify Music Trend Analysis</span>
+                <span class="project-meta" data-i18n="spotifyMeta">Regression, decision trees, exploratory analysis, presentation-ready reporting.</span>
+              </summary>
+              <div class="project-body with-image">
+                <button class="image-trigger" type="button" data-lightbox-src="assets/Spotify.png" data-lightbox-alt="Spotify music trend analysis project preview">
+                <img src="assets/Spotify.png" alt="Spotify music trend analysis project preview" />
+              </button>
+              <div>
+                <p data-i18n="spotifyDescription">Built a Spotify popularity prediction project using regression models, decision trees, and exploratory analysis to study which track features most strongly influence popularity.</p>
+                <ul>
+                  <li data-i18n="spotifyBulletOne">Designed the full workflow for data cleaning, feature analysis, model comparison, and insight synthesis.</li>
+                  <li data-i18n="spotifyBulletTwo">Summarized findings into a concise visual report for portfolio presentation and recruiter review.</li>
+                  <li data-i18n="spotifyBulletThree">Modeled popularity drivers across 110k+ songs (Python, regression, decision trees) with an interactive dashboard.</li>
+                </ul>
+              </div>
+              </div>
+            </details>
             </div>
-          </aside>
+          </section>
 
-          <div class="content-column">
-            <section class="experience">
-              <div class="section-head">
-                <h2 data-i18n="experienceTitle">Experience</h2>
-                <p data-i18n="experienceHint">Click an experience to expand the details.</p>
-              </div>
-
-              <div class="experience-shell">
-                <div class="experience-list" role="tablist" aria-label="Experience list">
-                  <button class="experience-item active" type="button" data-target="akila">
-                    <span class="item-date">2026.06 - 2026.10 (Expected)</span>
-                    <span class="item-title" data-i18n="expAkilaTitle">AI-Native Forward Deployed Engineer Intern</span>
-                    <span class="item-org" data-i18n="expAkilaOrg">Akila, Aden Group</span>
-                  </button>
-
-                  <button class="experience-item" type="button" data-target="research-student">
-                    <span class="item-date">2025.09 - Present</span>
-                    <span class="item-title" data-i18n="expOneTitle">Machine Learning Research Student</span>
-                    <span class="item-org" data-i18n="expOneOrg">Research Lab, University of Maryland (IBM Qiskit & QLab)</span>
-                  </button>
-
-                  <button class="experience-item" type="button" data-target="research-intern">
-                    <span class="item-date">2025.06 - 2025.07</span>
-                    <span class="item-title" data-i18n="expTwoTitle">Machine Learning Research Intern</span>
-                    <span class="item-org" data-i18n="expTwoOrg">Research Lab, University of Maryland (IBM Qiskit & QLab)</span>
-                  </button>
-
-                  <button class="experience-item" type="button" data-target="it-support">
-                    <span class="item-date">2025.07 - 2026.04</span>
-                    <span class="item-title" data-i18n="expThreeTitle">IT Systems Support Worker</span>
-                    <span class="item-org" data-i18n="expThreeOrg">University of Maryland</span>
-                  </button>
-
-                  <button class="experience-item" type="button" data-target="foundation">
-                    <span class="item-date">2024.06 - 2024.08</span>
-                    <span class="item-title" data-i18n="expFourTitle">Social Media Technology and Data Science Intern</span>
-                    <span class="item-org" data-i18n="expFourOrg">Hupanmodou Foundation</span>
+          <section class="block" id="experience">
+            <h2 data-i18n="experienceTitle">Experience</h2>
+            <p class="hint" data-i18n="experienceHint">Select a point on the timeline to read about that role.</p>
+            <ol class="timeline" role="tablist" aria-label="Experience timeline">
+              <li>
+                <button class="stop" type="button" role="tab" id="tab-hupan" aria-controls="exp-hupan" aria-selected="false" tabindex="-1">
+                  <span class="stop-dot" aria-hidden="true"></span>
+                  <span class="stop-date">2024.06</span>
+                  <span class="stop-title" data-i18n="expFourTitle">Social Media Technology and Data Science Intern</span>
+                  <span class="stop-org" data-i18n="expFourOrg">Hupanmodou Foundation</span>
+                </button>
+              </li>
+              <li>
+                <button class="stop" type="button" role="tab" id="tab-intern" aria-controls="exp-intern" aria-selected="false" tabindex="-1">
+                  <span class="stop-dot" aria-hidden="true"></span>
+                  <span class="stop-date">2025.06</span>
+                  <span class="stop-title" data-i18n="expTwoTitle">Machine Learning Research Intern</span>
+                  <span class="stop-org" data-i18n="expTwoOrg">Research Lab, University of Maryland (IBM Qiskit & QLab)</span>
+                </button>
+              </li>
+              <li>
+                <button class="stop" type="button" role="tab" id="tab-it" aria-controls="exp-it" aria-selected="false" tabindex="-1">
+                  <span class="stop-dot" aria-hidden="true"></span>
+                  <span class="stop-date">2025.07</span>
+                  <span class="stop-title" data-i18n="expThreeTitle">IT Systems Support Worker</span>
+                  <span class="stop-org" data-i18n="expThreeOrg">University of Maryland</span>
+                </button>
+              </li>
+              <li>
+                <button class="stop" type="button" role="tab" id="tab-student" aria-controls="exp-student" aria-selected="false" tabindex="-1">
+                  <span class="stop-dot" aria-hidden="true"></span>
+                  <span class="stop-date">2025.09</span>
+                  <span class="stop-title" data-i18n="expOneTitle">Machine Learning Research Student</span>
+                  <span class="stop-org" data-i18n="expOneOrg">Research Lab, University of Maryland (IBM Qiskit & QLab)</span>
+                </button>
+              </li>
+              <li>
+                <button class="stop active" type="button" role="tab" id="tab-akila" aria-controls="exp-akila" aria-selected="true" tabindex="0">
+                  <span class="stop-dot" aria-hidden="true"></span>
+                  <span class="stop-date">2026.06</span>
+                  <span class="stop-title" data-i18n="expAkilaTitle">AI-Native Forward Deployed Engineer Intern</span>
+                  <span class="stop-org" data-i18n="expAkilaOrg">Akila, Aden Group</span>
+                </button>
+              </li>
+            </ol>
+            <div class="exp-panels">
+              <article class="exp-panel" id="exp-hupan" role="tabpanel" aria-labelledby="tab-hupan" hidden>
+                <header class="panel-head">
+                  <span class="role-date">2024.06 – 2024.08</span>
+                  <h3 data-i18n="expFourTitle">Social Media Technology and Data Science Intern</h3>
+                  <p class="role-org" data-i18n="expFourOrg">Hupanmodou Foundation</p>
+                </header>
+                <div class="panel-body">
+                  <p class="role-meta" data-i18n="detailFourMeta">Website operations, data analysis, digital content strategy.</p>
+                  <ul>
+                    <li data-i18n="detailFourBulletOne">Analyzed engagement data to evaluate campaign effectiveness and user response.</li>
+                    <li data-i18n="detailFourBulletTwo">Supported website operations, content updates, and technical maintenance.</li>
+                    <li data-i18n="detailFourBulletThree">Turned audience insights into clearer communication and product-facing decisions.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="exp-panel" id="exp-intern" role="tabpanel" aria-labelledby="tab-intern" hidden>
+                <header class="panel-head">
+                  <span class="role-date">2025.06 – 2025.07</span>
+                  <h3 data-i18n="expTwoTitle">Machine Learning Research Intern</h3>
+                  <p class="role-org" data-i18n="expTwoOrg">Research Lab, University of Maryland (IBM Qiskit & QLab)</p>
+                </header>
+                <div class="panel-body with-image">
+                  <div>
+                    <p class="role-meta" data-i18n="detailTwoMeta">Low-fidelity transfer learning for molecular property prediction.</p>
+                    <ul>
+                      <li data-i18n="detailTwoBulletOne">Processed and analyzed 665K+ molecular samples to support large-scale low-fidelity transfer learning experiments.</li>
+                      <li data-i18n="detailTwoBulletTwo">Implemented distributed training pipelines with PyTorch Lightning to improve training efficiency and experimental throughput.</li>
+                      <li data-i18n="detailTwoBulletThree">Generated benchmarking results and quantitative reports that helped guide model comparison, optimization, and next-step research decisions.</li>
+                    </ul>
+                  </div>
+                  <button class="image-trigger" type="button" data-lightbox-src="assets/research-intern.png" data-lightbox-alt="Research intern poster">
+                    <img src="assets/research-intern.png" alt="Research intern poster" />
                   </button>
                 </div>
-
-                <div class="experience-detail">
-                  <article class="detail-panel text-only active" id="akila">
-                    <div class="detail-copy">
-                      <h3 data-i18n="detailAkilaTitle">AI-Native Forward Deployed Engineer Intern</h3>
-                      <p class="detail-meta" data-i18n="detailAkilaMeta">Akila, Aden Group · Hybrid, remote from Sep 2026 · LLM pipelines, data infrastructure, enterprise knowledge base</p>
-                      <ul class="detail-list">
-                        <li data-i18n="detailAkilaBulletOne">Built an LLM extraction pipeline over ~20,000 work orders and 250,000+ inspection records across 3 facility sites, structuring ~5,800 free-text maintenance narratives into typed fields; validated outputs with a human-in-the-loop accuracy/calibration harness and an independent embeddings + KMeans cross-check.</li>
-                        <li data-i18n="detailAkilaBulletTwo">Consolidated MySQL, TDengine and ClickHouse sources into one cleaned, PII-stripped MySQL instance on Coolify; scored data quality on a 24-table CMMS schema across 5 sites (equipment linkage 0.6%–79%) to scope per-site analysis.</li>
-                        <li data-i18n="detailAkilaBulletThree">Designed a 4-agent architecture (ingestion/chunking, Q&A, anomaly detection, alert email) on Mastra + pgvector, with the chunking agent as the shared data layer.</li>
-                        <li data-i18n="detailAkilaBulletFour">Led the source-data assessment for Aden Brain, the group's enterprise knowledge base: inventoried 20,000+ SharePoint files via Microsoft Graph PowerShell, flagged 5 governance risks, and costed 4 build routes.</li>
-                        <li data-i18n="detailAkilaBulletFive">Prototyped permission-aware retrieval on the Microsoft Graph Search API; tested it on real SOP queries and showed keyword search fails on paraphrased Chinese questions, motivating a semantic retrieval layer.</li>
-                        <li data-i18n="detailAkilaBulletSix">Delivered client-facing equipment risk reports from raw CMMS data, surfacing a fire-safety defect open for 13 months and 56 of 58 cancelled PM orders on one critical asset; approved for presentation to the end client.</li>
-                        <li data-i18n="detailAkilaBulletSeven">Built a React/TypeScript analytics dashboard (in beta for multi-tenant integration) and a PBI-to-CRM reconciliation on Dataverse that found 345 client companies missing from site-level reporting.</li>
-                      </ul>
-                    </div>
-                  </article>
-
-                  <article class="detail-panel" id="research-student">
-                    <div class="detail-copy">
-                      <h3 data-i18n="detailOneTitle">Machine Learning Research Student</h3>
-                      <p class="detail-meta" data-i18n="detailOneMeta">Research Lab, University of Maryland (IBM Qiskit & QLab) · Bayesian neural networks, uncertainty analysis, quantum ML benchmarking</p>
-                      <ul class="detail-list">
-                        <li data-i18n="detailOneBulletOne">Designed Bayesian neural network models for scientific prediction tasks, using uncertainty analysis to improve interpretability and confidence calibration.</li>
-                        <li data-i18n="detailOneBulletTwo">Benchmarked classical and quantum neural networks across multiple evaluation settings to compare performance, robustness, and practical tradeoffs.</li>
-                        <li data-i18n="detailOneBulletThree">Built MLflow-based experiment pipelines to strengthen reproducibility, tracking, and team collaboration inside the lab workflow, improving cross-run comparison efficiency by ~30%.</li>
-                        <li data-i18n="detailOneBulletFour">Built and trained graph neural networks for molecular property prediction, applying transfer learning to fine-tune models pretrained on 665k low-fidelity molecules toward high-fidelity experimental targets.</li>
-                        <li data-i18n="detailOneBulletFive">Engineered data-cleaning, preprocessing, and evaluation routines to support comparison across model architectures.</li>
-                      </ul>
-                    </div>
-                    <div class="detail-image">
-                      <button class="image-trigger" type="button" data-lightbox-src="assets/research-student.png" data-lightbox-alt="Research student poster">
-                        <img src="assets/research-student.png" alt="Research student poster" />
-                      </button>
-                    </div>
-                  </article>
-
-                  <article class="detail-panel" id="research-intern">
-                    <div class="detail-copy">
-                      <h3 data-i18n="detailTwoTitle">Machine Learning Research Intern</h3>
-                      <p class="detail-meta" data-i18n="detailTwoMeta">Research Lab, University of Maryland (IBM Qiskit & QLab) · Low-fidelity transfer learning for molecular property prediction</p>
-                      <ul class="detail-list">
-                        <li data-i18n="detailTwoBulletOne">Processed and analyzed 665K+ molecular samples to support large-scale low-fidelity transfer learning experiments.</li>
-                        <li data-i18n="detailTwoBulletTwo">Implemented distributed training pipelines with PyTorch Lightning to improve training efficiency and experimental throughput.</li>
-                        <li data-i18n="detailTwoBulletThree">Generated benchmarking results and quantitative reports that helped guide model comparison, optimization, and next-step research decisions.</li>
-                      </ul>
-                    </div>
-                    <div class="detail-image">
-                      <button class="image-trigger" type="button" data-lightbox-src="assets/research-intern.png" data-lightbox-alt="Research intern poster">
-                        <img src="assets/research-intern.png" alt="Research intern poster" />
-                      </button>
-                    </div>
-                  </article>
-
-                  <article class="detail-panel text-only" id="it-support">
-                    <div class="detail-copy">
-                      <h3 data-i18n="detailThreeTitle">IT Systems Support Worker</h3>
-                      <p class="detail-meta" data-i18n="detailThreeMeta">Linux operations, incident diagnosis, system documentation</p>
-                      <ul class="detail-list">
-                        <li data-i18n="detailThreeBulletOne">Diagnosed 100+ Linux and network incidents using logs and operational metrics.</li>
-                        <li data-i18n="detailThreeBulletTwo">Performed root-cause analysis and improved recurring issue documentation.</li>
-                        <li data-i18n="detailThreeBulletThree">Built stronger instincts for reliability, debugging, and operational systems thinking.</li>
-                        <li data-i18n="detailThreeBulletFour">Built an issue-tracking and knowledge-base system from log/usage analysis; managed Jira/Confluence workflows.</li>
-                      </ul>
-                    </div>
-                  </article>
-
-                  <article class="detail-panel text-only" id="foundation">
-                    <div class="detail-copy">
-                      <h3 data-i18n="detailFourTitle">Social Media Technology and Data Science Intern</h3>
-                      <p class="detail-meta" data-i18n="detailFourMeta">Website operations, data analysis, digital content strategy</p>
-                      <ul class="detail-list">
-                        <li data-i18n="detailFourBulletOne">Analyzed engagement data to evaluate campaign effectiveness and user response.</li>
-                        <li data-i18n="detailFourBulletTwo">Supported website operations, content updates, and technical maintenance.</li>
-                        <li data-i18n="detailFourBulletThree">Turned audience insights into clearer communication and product-facing decisions.</li>
-                      </ul>
-                    </div>
-                  </article>
+              </article>
+              <article class="exp-panel" id="exp-it" role="tabpanel" aria-labelledby="tab-it" hidden>
+                <header class="panel-head">
+                  <span class="role-date">2025.07 – 2026.04</span>
+                  <h3 data-i18n="expThreeTitle">IT Systems Support Worker</h3>
+                  <p class="role-org" data-i18n="expThreeOrg">University of Maryland</p>
+                </header>
+                <div class="panel-body">
+                  <p class="role-meta" data-i18n="detailThreeMeta">Linux operations, incident diagnosis, system documentation.</p>
+                  <ul>
+                    <li data-i18n="detailThreeBulletOne">Diagnosed 100+ Linux and network incidents using logs and operational metrics.</li>
+                    <li data-i18n="detailThreeBulletTwo">Performed root-cause analysis and improved recurring issue documentation.</li>
+                    <li data-i18n="detailThreeBulletThree">Built stronger instincts for reliability, debugging, and operational systems thinking.</li>
+                    <li data-i18n="detailThreeBulletFour">Built an issue-tracking and knowledge-base system from log/usage analysis; managed Jira/Confluence workflows.</li>
+                  </ul>
                 </div>
-              </div>
-            </section>
-
-            <section class="project-showcase">
-              <div class="section-head">
-                <h2 data-i18n="projectShowcaseTitle">Selected Projects</h2>
-                <p data-i18n="projectShowcaseHint">Two projects with visuals and polished project descriptions.</p>
-              </div>
-
-              <div class="project-grid">
-                <article class="project-card no-media" id="pinn-project">
-                  <div class="project-copy">
-                    <p class="project-kicker" data-i18n="pinnKicker">Scientific ML · Independent Research</p>
-                    <h3 data-i18n="pinnTitle">Quantum-Classical PINN for Seawater Temperature Diffusion</h3>
-                    <p class="project-meta" data-i18n="pinnMeta">Jun 2026 - Present · PyTorch, PennyLane, physics-informed neural networks</p>
-                    <ul class="detail-list">
-                      <li data-i18n="pinnBulletOne">Independently designed and implemented a physics-informed neural network (PyTorch) reproducing a published seawater-temperature diffusion PDE benchmark across 6 forward/inverse scenarios, matching the paper's reported L2 relative errors via Adam + L-BFGS optimization.</li>
-                      <li data-i18n="pinnBulletTwo">Extended it into a hybrid quantum-classical PINN (PennyLane variational quantum circuit between classical layers); its lightweight quantum branch cuts total parameters by ~40% (2,421–2,717 vs. 4,353 classical).</li>
-                      <li data-i18n="pinnBulletThree">Timed forward passes and first-/second-order gradients: hybrid runtime is far higher than classical and grows with qubit count, circuit depth and batch size, so parameter count alone overstates efficiency; about to publish this winter.</li>
+              </article>
+              <article class="exp-panel" id="exp-student" role="tabpanel" aria-labelledby="tab-student" hidden>
+                <header class="panel-head">
+                  <span class="role-date" data-i18n="expOneDate">2025.09 – Present</span>
+                  <h3 data-i18n="expOneTitle">Machine Learning Research Student</h3>
+                  <p class="role-org" data-i18n="expOneOrg">Research Lab, University of Maryland (IBM Qiskit & QLab)</p>
+                </header>
+                <div class="panel-body with-image">
+                  <div>
+                    <p class="role-meta" data-i18n="detailOneMeta">Bayesian neural networks, uncertainty analysis, quantum ML benchmarking.</p>
+                    <ul>
+                      <li data-i18n="detailOneBulletOne">Designed Bayesian neural network models for scientific prediction tasks, using uncertainty analysis to improve interpretability and confidence calibration.</li>
+                      <li data-i18n="detailOneBulletTwo">Benchmarked classical and quantum neural networks across multiple evaluation settings to compare performance, robustness, and practical tradeoffs.</li>
+                      <li data-i18n="detailOneBulletThree">Built MLflow-based experiment pipelines to strengthen reproducibility, tracking, and team collaboration inside the lab workflow, improving cross-run comparison efficiency by ~30%.</li>
+                      <li data-i18n="detailOneBulletFour">Built and trained graph neural networks for molecular property prediction, applying transfer learning to fine-tune models pretrained on 665k low-fidelity molecules toward high-fidelity experimental targets.</li>
+                      <li data-i18n="detailOneBulletFive">Engineered data-cleaning, preprocessing, and evaluation routines to support comparison across model architectures.</li>
                     </ul>
                   </div>
-                </article>
-
-                <article class="project-card" id="ai-pet-project">
-                  <button class="project-media project-media-preview image-trigger" type="button" data-lightbox-src="assets/ai-pet-preview.png" data-lightbox-alt="AI pet prototype interface preview">
-                    <span class="project-badge" data-i18n="aiPetBadge">Prototype Preview</span>
-                    <img src="assets/ai-pet-preview.png" alt="AI pet prototype interface preview" />
+                  <button class="image-trigger" type="button" data-lightbox-src="assets/research-student.png" data-lightbox-alt="Research student poster">
+                    <img src="assets/research-student.png" alt="Research student poster" />
                   </button>
-                  <div class="project-copy">
-                    <p class="project-kicker" data-i18n="aiPetKicker">AI Product · Conversational Interface</p>
-                    <h3 data-i18n="aiPetTitle">AI Pet Companion</h3>
-                    <p class="project-meta" data-i18n="aiPetMeta">Mobile-first interaction design, character-driven UX, planned public launch within 6 months</p>
-                    <p class="project-description" data-i18n="aiPetDescription">
-                      Designed and prototyped a mobile-first AI pet companion product focused on emotional interaction, character identity, and conversational user experience.
-                    </p>
-                    <ul class="detail-list">
-                      <li data-i18n="aiPetBulletOne">Built the visual prototype and interaction flow to define how users chat, bond, and engage with the companion.</li>
-                      <li data-i18n="aiPetBulletTwo">Developed the product direction around mobile-first design, expressive UI, and a planned public launch within 6 months.</li>
-                      <li data-i18n="aiPetBulletThree">Built an LLM-based conversational system with multi-turn dialogue/memory management using an agent-style workflow.</li>
-                      <li data-i18n="aiPetBulletFour">Logged retention and interaction frequency to iterate on conversation quality; authored the PRD.</li>
-                    </ul>
-                  </div>
-                </article>
+                </div>
+              </article>
+              <article class="exp-panel" id="exp-akila" role="tabpanel" aria-labelledby="tab-akila">
+                <header class="panel-head">
+                  <span class="role-date">2026.06 – 2026.10</span>
+                  <h3 data-i18n="expAkilaTitle">AI-Native Forward Deployed Engineer Intern</h3>
+                  <p class="role-org" data-i18n="expAkilaOrg">Akila, Aden Group</p>
+                </header>
+                <div class="panel-body">
+                  <p class="role-meta" data-i18n="detailAkilaMeta">Hybrid, remote from Sep 2026. LLM pipelines, data infrastructure, enterprise knowledge base.</p>
+                  <ul>
+                    <li data-i18n="detailAkilaBulletOne">Built an LLM extraction pipeline over ~20,000 work orders and 250,000+ inspection records across 3 facility sites, structuring ~5,800 free-text maintenance narratives into typed fields; validated outputs with a human-in-the-loop accuracy/calibration harness and an independent embeddings + KMeans cross-check.</li>
+                    <li data-i18n="detailAkilaBulletTwo">Consolidated MySQL, TDengine and ClickHouse sources into one cleaned, PII-stripped MySQL instance on Coolify; scored data quality on a 24-table CMMS schema across 5 sites (equipment linkage 0.6%–79%) to scope per-site analysis.</li>
+                    <li data-i18n="detailAkilaBulletThree">Designed a 4-agent architecture (ingestion/chunking, Q&A, anomaly detection, alert email) on Mastra + pgvector, with the chunking agent as the shared data layer.</li>
+                    <li data-i18n="detailAkilaBulletFour">Led the source-data assessment for Aden Brain, the group's enterprise knowledge base: inventoried 20,000+ SharePoint files via Microsoft Graph PowerShell, flagged 5 governance risks, and costed 4 build routes.</li>
+                    <li data-i18n="detailAkilaBulletFive">Prototyped permission-aware retrieval on the Microsoft Graph Search API; tested it on real SOP queries and showed keyword search fails on paraphrased Chinese questions, motivating a semantic retrieval layer.</li>
+                    <li data-i18n="detailAkilaBulletSix">Delivered client-facing equipment risk reports from raw CMMS data, surfacing a fire-safety defect open for 13 months and 56 of 58 cancelled PM orders on one critical asset; approved for presentation to the end client.</li>
+                    <li data-i18n="detailAkilaBulletSeven">Built a React/TypeScript analytics dashboard (in beta for multi-tenant integration) and a PBI-to-CRM reconciliation on Dataverse that found 345 client companies missing from site-level reporting.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
+        </main>
 
-                <article class="project-card" id="spotify-project">
-                  <div class="project-media">
-                    <img src="assets/Spotify.png" alt="Spotify music trend analysis project preview" />
-                  </div>
-                  <div class="project-copy">
-                    <p class="project-kicker" data-i18n="spotifyKicker">Data Science · Predictive Modeling</p>
-                    <h3 data-i18n="spotifyTitle">Spotify 音乐趋势分析</h3>
-                    <p class="project-meta" data-i18n="spotifyMeta">Regression, decision trees, exploratory analysis, presentation-ready reporting</p>
-                    <p class="project-description" data-i18n="spotifyDescription">
-                      Built a Spotify popularity prediction project using regression models, decision trees, and exploratory analysis to study which track features most strongly influence popularity.
-                    </p>
-                    <ul class="detail-list">
-                      <li data-i18n="spotifyBulletOne">Designed the full workflow for data cleaning, feature analysis, model comparison, and insight synthesis.</li>
-                      <li data-i18n="spotifyBulletTwo">Summarized findings into a concise visual report for portfolio presentation and recruiter review.</li>
-                      <li data-i18n="spotifyBulletThree">Modeled popularity drivers across 110k+ songs (Python, regression, decision trees) with an interactive dashboard.</li>
-                    </ul>
-                  </div>
-                </article>
-              </div>
-            </section>
-          </div>
-        </section>
-      </main>
+        <footer class="footer">
+          <p data-i18n="footerLine">Made by a unicorn from Hangzhou.</p>
+          <p>© 2026 Leyan Lyu</p>
+        </footer>
     </div>
 
     <div class="lightbox" id="lightbox" hidden>
